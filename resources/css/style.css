@@ -1,0 +1,138 @@
+/*Custom fonts--------------------------------------------------------------*/
+@font-face {
+  font-family: "Colus";
+  src: url(../fonts/Colus-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: url(../fonts/Avenir.ttc) format("opentype");
+}
+
+/*General styles------------------------------------------------------------*/
+html {
+  height: 100%;
+  font-size: 16px;
+  background-color: #FFF;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Avenir";
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+
+.avenir {
+  font-family: "Avenir";
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.colus {
+  font-family: "Colus";
+}
+
+h1 {
+  color: #FF0000;
+  font-size: 1.2rem;
+  letter-spacing: 1.04px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+/*Intro---------------------------------------------------------------------*/
+.intro {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+/*Navbar--------------------------------------------------------------------*/
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #FFF;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+}
+
+/*About me------------------------------------------------------------------*/
+.about {
+  justify-content: space-between;
+  margin: 10rem auto 1rem;
+}
+
+.about p {
+  font-size: 2.3rem;
+  margin: 150px 100px 10px 110px;
+}
+
+.about img {
+  width: 500px;
+  height: 100%;
+}
+
+/*Para qué soy buena--------------------------------------------------------*/
+.skills {
+  margin: 5rem auto 1rem;
+}
+
+.caboodle {
+  justify-content: space-around;
+}
+
+.spell {
+  flex-direction: column;
+  align-content: center;
+}
+
+.spell img {
+  margin: 30px auto;
+}
+
+.spell h2 {
+  margin-bottom: 10px;
+}
+
+li {
+  line-height: 1.2;
+}
+
+/*Portafolio----------------------------------------------------------------*/
+.portafolio {
+  margin: 5rem auto 1rem;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid img {
+  width: 100%;
+}
+
+/*Footer--------------------------------------------------------------------*/
+footer {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
