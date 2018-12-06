@@ -8,6 +8,28 @@
   </head>
 
   <body>
+    <!-- Menu -->
+    <div class="menu-overlay">
+      <nav class="overlay-menu">
+        <form class="search-form">
+          <input type="text" name="search" placeholder="Search..">
+        </form>
+        <ul class="one">
+          <li><a class="nav-links" href="#">Home</a></li>
+          <li><a class="nav-links" href="#">About</a></li>
+          <li><a class="nav-links" href="#">Work</a></li>
+          <li><a class="nav-links" href="#">Contact</a></li>
+        </ul>
+        <div>
+          <ul>
+            <li class="display-inline"><a class="social-round-icon" href="#"><i class="fa fa-codepen"></i></a></li>
+            <li class="display-inline"><a class="social-round-icon" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li class="display-inline"><a class="social-round-icon" href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        <div>
+      </nav>
+    </div>
+
     <!-- Intro -->
     <div class="intro">
       <div class="logo flex">
@@ -16,30 +38,14 @@
       <img src="" alt="">
     </div>
 
-    <!-- Menu -->
-    <div id="myNav" class="overlay">
-
-      <!-- Button to close the overlay navigation -->
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-      <!-- Overlay content -->
-      <div class="overlay-content">
-        <a href="#">_hola</a>
-        <a href="#">servicios</a>
-        <a href="#">mis trabajos</a>
-        <a href="#">contacto</a>
-      </div>
-
-    </div>
-
     <!-- Header -->
     <section>
       <div class="header flex sticky">
         <p><a href="#">eng</a> / <a href="#">esp</a></p>
         <img src="resources/images/logo_black.svg" alt="">
-        <button onclick="openNav()" class="hamburger hamburger-cancel hamburger-vertical hamburger-plus">
-          <span onclick="openNav()" class="icon"></span>
-        </button>
+        <a id="hamburger" class="flex" onclick="openNav()">
+          <img src="resources/images/menu.svg" alt="">
+        </a>
       </div>
     </section>
 
@@ -120,15 +126,6 @@
 
     <!-- Local JS -->
     <script src="resources/js/main.js"></script>
-    <script type="text/javascript">
-      /* Open */
-      function openNav() {
-        document.getElementById("myNav").style.display = "block";
-      }
 
-      function closeNav() {
-        document.getElementById("myNav").style.display = "none";
-      }
-    </script>
   </body>
 </html>

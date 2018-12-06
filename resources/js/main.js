@@ -10,22 +10,10 @@ $(document).ready(function() {
     else sticky.removeClass('fixed');
   });
 
-  // hamburger menu
-  var el = document.querySelectorAll('.hamburger');
-  for(i=0; i<=el.length; i++) {
-    el[i].addEventListener('click', function() {
-      this.classList.toggle('active');
-    }, false);
-  }
-
-  /* Open */
-  function openNav() {
-    document.getElementById("myNav").style.display = "block";
-  }
-
-/* Close */
-  function closeNav() {
-    document.getElementById("myNav").style.display = "none";
-  }
+  $(".menu-link").click(function(event) {
+    event.preventDefault();
+    $(".menu-overlay").toggleClass("open");
+    $(".menu").toggleClass("open");
+  });
 
 });
