@@ -10,32 +10,38 @@
   <body>
     <!-- Intro -->
     <div class="intro">
+      <div class="logo flex">
+        <img src="resources/images/logo inicio.svg" alt="">
+      </div>
       <img src="" alt="">
-      <img src="" alt="">
+    </div>
+
+    <!-- Menu -->
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="#">_hola</a>
+        <a href="#">servicios</a>
+        <a href="#">mis trabajos</a>
+        <a href="#">contacto</a>
+      </div>
+
     </div>
 
     <!-- Header -->
     <section>
       <div class="header flex sticky">
         <p><a href="#">eng</a> / <a href="#">esp</a></p>
-        <img src="" alt="">
-        <button class="hamburger hamburger-cancel">
-          <span class="icon"></span>
+        <img src="resources/images/logo_black.svg" alt="">
+        <button onclick="openNav()" class="hamburger hamburger-cancel hamburger-vertical hamburger-plus">
+          <span onclick="openNav()" class="icon"></span>
         </button>
-        <!--<a class="cross"></a>-->
       </div>
     </section>
-
-    <!-- Menu -->
-    <div class="menu">
-      <img src="" alt="">
-      <ul class="colus">
-        <li>_hola</li>
-        <li>servicios</li>
-        <li>mis trabajos</li>
-        <li>contacto</li>
-      </ul>
-    </div>
 
     <!-- About me -->
     <div class="about flex">
@@ -110,10 +116,19 @@
     <footer></footer>
 
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
 
     <!-- Local JS -->
     <script src="resources/js/main.js"></script>
+    <script type="text/javascript">
+      /* Open */
+      function openNav() {
+        document.getElementById("myNav").style.display = "block";
+      }
 
+      function closeNav() {
+        document.getElementById("myNav").style.display = "none";
+      }
+    </script>
   </body>
 </html>
