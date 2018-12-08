@@ -12,7 +12,7 @@
 /*General styles------------------------------------------------------------*/
 html {
   height: 100%;
-  font-size: 17px;
+  font-size: 16px;
   background-color: #FFF;
 }
 
@@ -48,6 +48,7 @@ a {
   color: #000;
   text-decoration: none;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 a:hover {
@@ -57,10 +58,7 @@ a:hover {
 
 /*Intro---------------------------------------------------------------------*/
 .intro {
-  background: url("../images/fondo1.png");
   background-color: #000;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 100%;
   height: 100%;
 }
@@ -96,28 +94,143 @@ a:hover {
   height: 50%;
 }
 
-.header a {
+.hamburger {
+  display: inline-block;
   height: 45%;
-  align-items: center;
   cursor: pointer;
 }
 
-.header a:hover {
+.hamburger:hover {
   transform: rotate(270deg);
 }
 
-/*Menu----------------------------------------------------------------------*/
+.header label {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
+/*Menu----------------------------------------------------------------------*/
+.lower{
+  display:none;
+}
+
+input{
+  display:none;
+}
+
+label:hover{
+  cursor: pointer;
+  transform: rotate(270deg) !important;
+}
+
+.overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0);
+}
+
+.overlay label{
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 100;
+  cursor: pointer;
+}
+
+.overlay nav {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+	text-align: left;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	font-size: 54px;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	min-height: 54px;
+}
+
+.overlay ul li a {
+  color: #FF0000;
+	display: block;
+  text-decoration:none;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #FFF;
+  font-size: 54px;
+}
+
+.lower~.overlay-hugeinc{
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+	transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+#op:checked~.overlay-hugeinc{
+	opacity: 1;
+	visibility: visible;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.overlay-hugeinc nav {
+	-moz-perspective: 300px;
+}
+
+.overlay-hugeinc nav ul {
+	opacity: 0.4;
+	-webkit-transform: translateY(-25%) rotateX(35deg);
+	transform: translateY(-25%) rotateX(35deg);
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+#op:checked~.overlay-hugeinc nav ul {
+	opacity: 1;
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+
+#op:not(:checked)~.overlay-hugeinc nav ul {
+	-webkit-transform: translateY(25%) rotateX(-35deg);
+	transform: translateY(25%) rotateX(-35deg);
+}
 
 /*About me------------------------------------------------------------------*/
 .about {
   justify-content: space-between;
-  margin: 10rem auto 1rem;
+  margin: 10rem auto 15rem;
   height: 50%;
 }
 
 .about p {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 150px 125px 10px 110px;
 }
 
@@ -158,7 +271,6 @@ li {
 .portafolio {
   width: 80%;
   margin: 5rem auto 15rem;
-  text-align: right;
 }
 
 .grid {

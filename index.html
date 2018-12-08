@@ -8,28 +8,6 @@
   </head>
 
   <body>
-    <!-- Menu -->
-    <div class="menu-overlay">
-      <nav class="overlay-menu">
-        <form class="search-form">
-          <input type="text" name="search" placeholder="Search..">
-        </form>
-        <ul class="one">
-          <li><a class="nav-links" href="#">Home</a></li>
-          <li><a class="nav-links" href="#">About</a></li>
-          <li><a class="nav-links" href="#">Work</a></li>
-          <li><a class="nav-links" href="#">Contact</a></li>
-        </ul>
-        <div>
-          <ul>
-            <li class="display-inline"><a class="social-round-icon" href="#"><i class="fa fa-codepen"></i></a></li>
-            <li class="display-inline"><a class="social-round-icon" href="#"><i class="fa fa-facebook"></i></a></li>
-            <li class="display-inline"><a class="social-round-icon" href="#"><i class="fa fa-dribbble"></i></a></li>
-          </ul>
-        <div>
-      </nav>
-    </div>
-
     <!-- Intro -->
     <div class="intro">
       <div class="logo flex">
@@ -43,20 +21,38 @@
       <div class="header flex sticky">
         <p><a href="#">eng</a> / <a href="#">esp</a></p>
         <img src="resources/images/logo_black.svg" alt="">
-        <a id="hamburger" class="flex" onclick="openNav()">
-          <img src="resources/images/menu.svg" alt="">
+        <a class="flex hamburger">
+          <label for="op"><img src="resources/images/menu.svg" alt=""></label>
         </a>
       </div>
     </section>
 
+    <!-- Menu -->
+    <input type="checkbox" id="op"></input>
+    <div class="lower">
+      <label class="colus" for="op">click the text</label>
+    </div>
+
+    <div class="overlay overlay-hugeinc">
+      <label for="op"><img class="close" src="resources/images/cerrar.svg" alt=""></label>
+      <nav>
+        <ul>
+          <li><a href="#hola" class="colus">_hola</a></li>
+          <li><a href="#servicios" class="colus">servicios</a></li>
+          <li><a href="#trabajos" class="colus">mis trabajos</a></li>
+          <li><a href="#contacto" class="colus">contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+
     <!-- About me -->
-    <div class="about flex">
+    <div id="hola" class="about flex">
       <p class="avenir">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
       <img src="resources/images/profile.png" alt="">
     </div>
 
     <!-- Para qué soy buena -->
-    <div class="skills">
+    <div id="servicios" class="skills">
       <h1 class="avenir">- ¿Para qué soy buena?</h1>
       <div class="caboodle flex">
         <div class="spell flex">
@@ -94,7 +90,7 @@
           </ul>
         </div>
 
-        <div class="spell flex">
+        <!--<div class="spell flex">
           <img src="resources/images/magic-crystal.svg" alt="Estuche de Monerías">
           <h2 class="colus">_<br>Estuche de <br>Monerias</h2>
           <ul>
@@ -103,23 +99,23 @@
             <li>DIY Entusiasta</li>
             <li>Escritura</li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <!-- Portafolio -->
-    <div class="portafolio">
+    <div id="trabajos" class="portafolio">
       <h1 class="avenir">- Portafolio</h1>
       <div class="grid">
         <img src="resources/images/preview.png" alt="Preview">
         <img src="resources/images/preview.png" alt="Preview">
         <img src="resources/images/preview.png" alt="Preview">
       </div>
-      <a class="colus" href="#">Más trabajos</a>
+      <a class="avenir" href="#">_Ver más trabajos</a>
     </div>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer id="contacto"></footer>
 
     <!-- jQuery -->
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
