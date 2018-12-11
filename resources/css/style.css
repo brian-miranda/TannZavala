@@ -95,7 +95,8 @@ a:hover {
 }
 
 .hamburger {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   height: 45%;
   cursor: pointer;
 }
@@ -104,145 +105,74 @@ a:hover {
   transform: rotate(270deg);
 }
 
-.header label {
+/*Menu----------------------------------------------------------------------*/
+.overlay {
+  display: block;
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  width: 70.5%;
+  height: 80%;
+  margin: 5rem auto 15rem;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration:;
+  font-size: 3rem;
+  color: #FF0000;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+.list {
+  margin: 10rem auto 20rem 10rem;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  float: right;
   display: flex;
   align-items: center;
-  height: 100%;
-}
-
-/*Menu----------------------------------------------------------------------*/
-.lower{
-  display:none;
-}
-
-input{
-  display:none;
-}
-
-label:hover{
   cursor: pointer;
+
 }
 
-li label:hover {
-  transform: none;
+.closebtn:hover {
+  transform: rotate(225deg);
 }
 
-.overlay{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0);
+.closebtn img {
+  height: 2rem;
+  width: 2rem;
 }
 
-menu {
-  width: 70%;
-  height: 100%;
-  margin: -3rem auto 15rem;
+.overlay .social {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-around;
-}
-
-menu label{
-	width: 29px;
-	height: 29px;
-  text-align: right;
-	z-index: 100;
-  cursor: pointer;
-}
-
-img.close {
-  width: 100%;
-  height: 100%;
-}
-
-menu nav {
-  width: 80%;
-
-  margin-left: auto;
-  margin-right: auto;
-	text-align: left;
-
-	font-size: 54px;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-menu ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	height: 100%;
-}
-
-menu ul li {
-	display: block;
-	min-height: 54px;
-}
-
-menu ul li a {
-  color: #FF0000;
-	display: block;
-  text-decoration:none;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-menu ul li a:hover,
-menu ul li a:focus {
-	color: #FFF;
-  font-size: 54px;
-}
-
-menu .social {
-  margin: 10rem 0 10rem;
-  text-align: right;
-}
-
-.lower~.overlay-hugeinc{
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-	transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-#op:checked~.overlay-hugeinc{
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-}
-
-.overlay-hugeinc nav {
-	-moz-perspective: 300px;
-}
-
-.overlay-hugeinc nav ul {
-	opacity: 0.4;
-	-webkit-transform: translateY(-25%) rotateX(35deg);
-	transform: translateY(-25%) rotateX(35deg);
-	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-	transition: transform 0.5s, opacity 0.5s;
-}
-
-#op:checked~.overlay-hugeinc nav ul {
-	opacity: 1;
-	-webkit-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-}
-
-#op:not(:checked)~.overlay-hugeinc nav ul {
-	-webkit-transform: translateY(25%) rotateX(-35deg);
-	transform: translateY(25%) rotateX(-35deg);
+  float: right;
 }
 
 /*About me------------------------------------------------------------------*/
 .about {
   justify-content: space-between;
-  margin: 10rem auto 15rem;
+  margin: 10rem auto 5rem;
+  padding-top: 100px;
   height: 50%;
 }
 
@@ -260,6 +190,7 @@ menu .social {
 .skills {
   width: 80%;
   margin: 5rem auto 15rem;
+  padding-top: 100px;
 }
 
 .caboodle {
@@ -293,6 +224,7 @@ li {
 .portafolio {
   width: 80%;
   margin: 5rem auto 15rem;
+  padding-top: 100px;
 }
 
 .grid {
