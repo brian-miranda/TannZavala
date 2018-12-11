@@ -5,6 +5,7 @@
     <title>Tann Zavala</title>
     <link href="resources/css/reset.css" type="text/css" rel="stylesheet">
     <link href="resources/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
 
   <body>
@@ -34,15 +35,22 @@
     </div>
 
     <div class="overlay overlay-hugeinc">
-      <label for="op"><img class="close" src="resources/images/cerrar.svg" alt=""></label>
-      <nav>
-        <ul>
-          <li><a href="#hola" class="colus">_hola</a></li>
-          <li><a href="#servicios" class="colus">servicios</a></li>
-          <li><a href="#trabajos" class="colus">mis trabajos</a></li>
-          <li><a href="#contacto" class="colus">contacto</a></li>
-        </ul>
-      </nav>
+      <menu>
+        <label for="op"><img class="close" src="resources/images/cerrar.svg" alt=""></label>
+        <nav>
+          <ul>
+            <li><a href="#hola" class="colus">_hola</a></li>
+            <li><a href="#servicios" class="colus">servicios</a></li>
+            <li><a href="#trabajos" class="colus">mis trabajos</a></li>
+            <li><a href="#contacto" class="colus">contacto</a></li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-behance"></i></a>
+        </div>
+      </menu>
     </div>
 
     <!-- About me -->
@@ -90,7 +98,7 @@
           </ul>
         </div>
 
-        <!--<div class="spell flex">
+        <div class="spell flex">
           <img src="resources/images/magic-crystal.svg" alt="Estuche de Monerías">
           <h2 class="colus">_<br>Estuche de <br>Monerias</h2>
           <ul>
@@ -99,7 +107,7 @@
             <li>DIY Entusiasta</li>
             <li>Escritura</li>
           </ul>
-        </div> -->
+        </div>
       </div>
     </div>
 
@@ -107,15 +115,30 @@
     <div id="trabajos" class="portafolio">
       <h1 class="avenir">- Portafolio</h1>
       <div class="grid">
-        <img src="resources/images/preview.png" alt="Preview">
-        <img src="resources/images/preview.png" alt="Preview">
-        <img src="resources/images/preview.png" alt="Preview">
+        <a href="project.html"><img src="resources/images/preview.png" alt="Preview"></a>
+        <a href="project.html"><img src="resources/images/preview.png" alt="Preview"></a>
+        <a href="project.html"><img src="resources/images/preview.png" alt="Preview"></a>
       </div>
-      <a class="avenir" href="#">_Ver más trabajos</a>
+      <a class="avenir" href="portafolio.html">_Ver más trabajos <i class="fas fa-arrow-right"></i></a>
     </div>
 
     <!-- Footer -->
-    <footer id="contacto"></footer>
+    <footer id="contacto">
+      <div class="quote">
+        <h1 class="avenir">Graphic Design will save the world<br>right after Rock & Roll does.</h1>
+        <h3>_David Carson</h3>
+      </div>
+      <div class="social">
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-behance"></i>
+      </div>
+      <div class="social">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-behance"></i></a>
+      </div>
+    </footer>
 
     <!-- jQuery -->
     <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
