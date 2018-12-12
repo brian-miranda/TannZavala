@@ -13,8 +13,11 @@
     <div class="intro">
       <div class="logo flex">
         <img src="resources/images/logo inicio.svg" alt="">
+        <a href="#hola" class="scroll flex">
+          <p>SCROLL</p>
+          <img src="resources/images/scroll.svg" alt="">
+        </a>
       </div>
-      <img src="" alt="">
     </div>
 
     <!-- Header -->
@@ -139,26 +142,33 @@
 
     <!-- Local JS -->
     <script type="text/javascript">
-    // header animation
-    var stickyOffset = $(".sticky").offset().top;
+      // header animation
+      var stickyOffset = $(".sticky").offset().top;
 
-    $(window).scroll(function(){
-      var sticky = $(".sticky"),
-          scroll = $(window).scrollTop();
+      $(window).scroll(function(){
+        var sticky = $(".sticky"),
+            scroll = $(window).scrollTop();
 
-      if (scroll >= stickyOffset) sticky.addClass("fixed");
-      else sticky.removeClass("fixed");
-    });
+        if (scroll >= stickyOffset) sticky.addClass("fixed");
+        else sticky.removeClass("fixed");
+      });
 
-    /* Open */
-    function openNav() {
-      document.getElementById("myNav").style.height = "100%";
-    }
+      // open menu
+      function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+      }
 
-    /* Close */
-    function closeNav() {
-      document.getElementById("myNav").style.height = "0%";
-    }
+      // close menu
+      function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+      }
+
+      // scroll button
+      $(".scroll").click(function() {
+        $('html,body').animate({
+          scrollTop: $(".about").offset().top
+        }, 'slow');
+      });
     </script>
 
   </body>
