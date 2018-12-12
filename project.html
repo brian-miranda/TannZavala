@@ -8,14 +8,86 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   </head>
   <body>
+    <!-- Header -->
     <section>
       <div class="header flex sticky">
         <p><a href="#">eng</a> / <a href="#">esp</a></p>
         <img src="resources/images/logo_black.svg" alt="">
-        <a class="flex hamburger">
-          <label for="op"><img src="resources/images/menu.svg" alt=""></label>
+        <a class="flex hamburger" onclick="openNav()">
+          <img src="resources/images/menu.svg" alt="">
         </a>
       </div>
     </section>
+
+    <!-- Menu -->
+    <div id="myNav" class="overlay">
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <img src="resources/images/cerrar.svg" alt="">
+        </a>
+        <img src="resources/images/logo menu.svg" alt="">
+        <div class="list">
+          <a href="index.html#hola" onclick="closeNav()" class="colus">_hola</a>
+          <a href="index.html#servicios" onclick="closeNav()" class="colus">servicios</a>
+          <a href="index.html#trabajos" onclick="closeNav()" class="colus">mis trabajos</a>
+          <a href="index.html#contacto" onclick="closeNav()" class="colus">contacto</a>
+        </div>
+        <div class="social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Project -->
+    <div class="project flex">
+      <div class="description flex">
+        <h1>Providencia 1048</h1>
+        <h2>_branding</h2>
+        <h3>2016</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a class="avenir" href="project.html">_siguiente proyecto <i class="fas fa-arrow-right"></i></a>
+        <a class="avenir" href="index.html">_volver a portafolio</a>
+      </div>
+
+      <div class="images">
+        <img src="resources/images/projects/providencia1048/1.jpg" alt="">
+        <img src="resources/images/projects/providencia1048/2.jpg" alt="">
+        <img src="resources/images/projects/providencia1048/3.jpg" alt="">
+        <img src="resources/images/projects/providencia1048/4.jpg" alt="">
+        <img src="resources/images/projects/providencia1048/5.jpg" alt="">
+        <img src="resources/images/projects/providencia1048/6.jpg" alt="">
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+
+    <!-- Local JS -->
+    <script type="text/javascript">
+    // header animation
+    var stickyOffset = $(".sticky").offset().top;
+
+    $(window).scroll(function(){
+      var sticky = $(".sticky"),
+          scroll = $(window).scrollTop();
+
+      if (scroll >= stickyOffset) sticky.addClass("fixed");
+      else sticky.removeClass("fixed");
+    });
+
+    /* Open */
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    /* Close */
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
   </body>
 </html>

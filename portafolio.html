@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="resources/css/reset.css" type="text/css" rel="stylesheet">
+    <link href="resources/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Header -->
+    <section>
+      <div class="header flex sticky">
+        <p><a href="#">eng</a> / <a href="#">esp</a></p>
+        <img src="resources/images/logo_black.svg" alt="">
+        <a class="flex hamburger" onclick="openNav()">
+          <img src="resources/images/menu.svg" alt="">
+        </a>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <div id="myNav" class="overlay">
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <img src="resources/images/cerrar.svg" alt="">
+        </a>
+        <img src="resources/images/logo menu.svg" alt="">
+        <div class="list">
+          <a href="index.html#hola" onclick="closeNav()" class="colus">_hola</a>
+          <a href="index.html#servicios" onclick="closeNav()" class="colus">servicios</a>
+          <a href="index.html#trabajos" onclick="closeNav()" class="colus">mis trabajos</a>
+          <a href="index.html#contacto" onclick="closeNav()" class="colus">contacto</a>
+        </div>
+        <div class="social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-behance"></i></a>
+        </div>
+      </div>
+
+    </div>
+    
+  </body>
+</html>
