@@ -105,7 +105,6 @@ a:hover {
   width: 100%;
   background-color: #FFF;
   align-items: center;
-  align-content: center;
   justify-content: space-around;
   height: 100px;
   position: absolute
@@ -142,6 +141,7 @@ a:hover {
   left: 0;
   top: 0;
   background-color: #000;
+  overflow-y: hidden;
   overflow-x: hidden;
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
@@ -163,8 +163,13 @@ a:hover {
   transition: 0.3s; /* Transition effects on hover (color) */
 }
 
+.menu-logo {
+  height: 15%;
+  width: 15%;
+}
+
 .list {
-  margin: 10rem 0 10rem 10rem;
+  margin: 10rem 0 15rem 10rem;
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -178,7 +183,6 @@ a:hover {
   display: flex;
   align-items: center;
   cursor: pointer;
-
 }
 
 .closebtn:hover {
@@ -205,7 +209,7 @@ a:hover {
 
 .about p {
   font-size: 2.1rem;
-  margin: 150px 125px 10px 110px;
+  margin: 150px 265px 10px 110px;
 }
 
 .about img {
